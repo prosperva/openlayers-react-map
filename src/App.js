@@ -7,7 +7,7 @@ import Point from "ol/geom/Point";
 import { osm, vector } from "./Source";
 import { fromLonLat, get } from "ol/proj";
 import GeoJSON from "ol/format/GeoJSON";
-import { Controls, FullScreenControl } from "./Controls";
+import { Controls, FullScreenControl, PrintControl } from "./Controls";
 import FeatureStyles from "./Features/Styles";
 
 import mapConfig from "./config.json";
@@ -74,6 +74,7 @@ const App = () => {
         </Layers>
         <Controls>
           <FullScreenControl />
+          <PrintControl />
         </Controls>
       </Map>
       <div>
