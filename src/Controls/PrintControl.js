@@ -6,6 +6,7 @@ import { saveAs } from "save-as";
 import { useContext, useEffect } from "react";
 
 import CanvasAttribution from "ol-ext/control/CanvasAttribution";
+import "./print.css";
 
 const PrintControl = () => {
   const { map } = useContext(MapContext);
@@ -14,7 +15,11 @@ const PrintControl = () => {
     let print = new PrintDialog({});
     map.controls.push(print);
 
-    let attr = new CanvasAttribution({});
+    let attr = new CanvasAttribution({
+      label: "Awesome attribution",
+      collapsed: true,
+      collapsible: false,
+    });
     map.controls.push(attr);
 
     print.on(["print", "error"], function (e) {

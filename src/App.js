@@ -82,7 +82,7 @@ const App = () => {
           type="checkbox"
           checked={showLayer1}
           onChange={(event) => setShowLayer1(event.target.checked)}
-        />{" "}
+        />
         Johnson County
       </div>
       <div>
@@ -90,7 +90,7 @@ const App = () => {
           type="checkbox"
           checked={showLayer2}
           onChange={(event) => setShowLayer2(event.target.checked)}
-        />{" "}
+        />
         Wyandotte County
       </div>
       <hr />
@@ -99,7 +99,7 @@ const App = () => {
           type="checkbox"
           checked={showMarker}
           onChange={(event) => setShowMarker(event.target.checked)}
-        />{" "}
+        />
         Show markers
       </div>
     </div>
