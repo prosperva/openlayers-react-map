@@ -6,6 +6,7 @@ import { saveAs } from "save-as";
 import { useContext, useEffect } from "react";
 
 import CanvasAttribution from "ol-ext/control/CanvasAttribution";
+import CanvasTitle from "ol-ext/control/CanvasTitle";
 import "./print.css";
 
 const PrintControl = () => {
@@ -21,6 +22,11 @@ const PrintControl = () => {
       collapsible: false,
     });
     map.controls.push(attr);
+
+    let title = new CanvasTitle({});
+    title.setTitle("Map Title");
+    title.setVisible(true);
+    map.controls.push(title);
 
     print.on(["print", "error"], function (e) {
       if (e.image) {
